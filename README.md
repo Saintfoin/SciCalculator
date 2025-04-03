@@ -29,12 +29,20 @@
    ```bash
    git clone https://github.com/Saintfoin/SciCalculator.git
    ```
-
-2. 直接在浏览器中打开index.html文件即可使用
-
-## 在线预览
-
-访问 [GitHub Pages](https://saintfoin.github.io/SciCalculator) 即可在线使用计算器。
+2. 启动本地服务器：
+   - 使用Python的SimpleHTTPServer（Python 2）：
+     ```bash
+     python -m SimpleHTTPServer 8000
+     ```
+   - 使用Python的http.server（Python 3）：
+     ```bash
+     python -m http.server 8000
+     ```
+   - 使用Node.js的http-server：
+     ```bash
+     npx http-server .
+     ```
+3. 直接在浏览器中打开index.html文件即可使用
 
 ## 贡献
 

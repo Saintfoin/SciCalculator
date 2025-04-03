@@ -1,0 +1,122 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* 计算器容器 */
+.calculator {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 显示区域 */
+.display {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.history {
+    min-height: 20px;
+    color: #6c757d;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.current-input {
+    font-size: 2em;
+    text-align: right;
+    color: #212529;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 按键区域 */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* 科学计算按键区域 */
+.keypad .scientific {
+    grid-column: span 1;
+}
+
+/* 按键样式 */
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* 不同类型按键的颜色 */
+.number {
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+.operator {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.function {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.equals {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.scientific {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .current-input {
+        font-size: 1.5em;
+    }
+}
